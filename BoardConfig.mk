@@ -1,9 +1,6 @@
 # Copyright (C) 2015 The CyanogenMod Project
 # Copyright (C) 2017 The LineageOS Project
-<<<<<<< HEAD
-=======
 # Copyright (C) 2017 the OmniRom Project
->>>>>>> de0e74c... WIP - Android 7.1 Bringup
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,9 +21,6 @@
 # included in a build is to use PRODUCT_PACKAGES in a product
 # definition file).
 #
-
-# Inherit from oppo-common
--include device/oppo/common/BoardConfigCommon.mk
 
 TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2
 
@@ -183,10 +177,6 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
-CONFIG_EAP_PROXY := qmi
-CONFIG_EAP_PROXY_DUAL_SIM := true
-CONFIG_EAP_PROXY_AKA_PRIME := true
-CONFIG_EAP_PROXY_MSM8994_TARGET := true
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
