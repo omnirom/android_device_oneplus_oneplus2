@@ -123,6 +123,9 @@ ENABLE_CPUSETS := true
 TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
 
+# display
+TARGET_QCOM_DISPLAY_VARIANT := caf-msm8992
+
 # Graphics
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_USES_ION := true
@@ -201,3 +204,11 @@ BOARD_USES_QC_TIME_SERVICES := true
 
 # inherit from the proprietary version
 -include vendor/oneplus/oneplus2/BoardConfigVendor.mk
+
+# TWRP
+TW_THEME := portrait_hdpi
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+BOARD_HAS_NO_REAL_SDCARD := true
+TW_NO_SCREEN_TIMEOUT := true
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
