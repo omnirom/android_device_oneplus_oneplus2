@@ -1,5 +1,4 @@
 #
-# Copyright (C) 2015 The CyanogenMod Project
 # Copyright 2017 The Android OmniRom Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,6 +14,15 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := $(call my-dir)
+# This contains the module build definitions for the hardware-specific
+# components for this device.
+#
+# As much as possible, those components should be built unconditionally,
+# with device-specific names to avoid collisions, to avoid device-specific
+# bitrot and build breakages. Building a component unconditionally does
+# *not* include it on all devices, so it is safe even with hardware-specific
+# components.
 
-include $(call first-makefiles-under,$(LOCAL_PATH))
+PRODUCT_MAKEFILES := \
+	$(LOCAL_DIR)/device.mk \
+	$(LOCAL_DIR)/omni_oneplus2.mk

@@ -1,5 +1,9 @@
 # Copyright (C) 2015 The CyanogenMod Project
 # Copyright (C) 2017 The LineageOS Project
+<<<<<<< HEAD
+=======
+# Copyright (C) 2017 the OmniRom Project
+>>>>>>> de0e74c... WIP - Android 7.1 Bringup
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,9 +30,7 @@
 
 TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2
 
-PLATFORM_PATH := device/oneplus/oneplus2
-
-BOARD_VENDOR := oneplus
+BOARD_PATH := device/oneplus/oneplus2
 
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
@@ -57,10 +59,13 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 TARGET_USES_64_BIT_BINDER := true
 
+ENABLE_CPUSETS := true
+
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-3
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-5 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -75,6 +80,7 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
+TARGET_USES_QCOM_BSP := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-uart"
@@ -107,10 +113,7 @@ QCOM_BT_USE_BTNV := true
 QCOM_BT_USE_SMD_TTY := true
 
 # Camera
-TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
-USE_DEVICE_SPECIFIC_CAMERA := true
-TARGET_USES_MEDIA_EXTENSIONS := true
-TARGET_HAS_LEGACY_CAMERA_HAL1 := true
+USE_CAMERA_STUB := true
 
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
@@ -145,18 +148,11 @@ SF_VSYNC_EVENT_PHASE_OFFSET_NS := 6000000
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_oneplus2
-TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
-
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
-
-# RIL
-TARGET_RIL_VARIANT := caf
 
 # RPC
 TARGET_NO_RPC := true
@@ -208,15 +204,10 @@ TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-
 BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
-
-# CM Hardware
-BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
-TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # inherit from the proprietary version
 -include vendor/oneplus/oneplus2/BoardConfigVendor.mk
