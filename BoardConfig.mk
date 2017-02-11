@@ -166,9 +166,6 @@ TARGET_PROVIDES_LIBLIGHT := true
 # RPC
 TARGET_NO_RPC := true
 
-# RIL
-BOARD_PROVIDES_LIBRIL := true
-
 # Sensors
 USE_SENSOR_MULTI_HAL := true
 
