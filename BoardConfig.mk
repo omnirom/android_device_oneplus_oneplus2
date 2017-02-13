@@ -157,6 +157,9 @@ TARGET_SPECIFIC_HEADER_PATH := $(BOARD_PATH)/include
 TARGET_INIT_VENDOR_LIB := libinit_oneplus2
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
+# liblights
+TARGET_PROVIDES_LIBLIGHT := true
+
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
 
