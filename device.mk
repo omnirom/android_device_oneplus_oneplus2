@@ -238,6 +238,9 @@ PRODUCT_PACKAGES += \
     sensors.msm8994 \
     sensors.ssc.wrapper
 
+PRODUCT_PACKAGES += \
+    Oneplus2Parts
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf
 
