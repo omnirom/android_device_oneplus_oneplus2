@@ -287,7 +287,7 @@
         com.android.internal.os.DeviceKeyHandler interface. -->
     <string name="config_deviceKeyHandlerClass" translatable="false">org.omnirom.device.KeyHandler</string>
 
-    <!-- Flag specifying whether VT should be available for carrier: independent of
+    <!-- Flag specifying whether vt should be available for carrier: independent of
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
          provisioning, availability etc -->
     <bool name="config_carrier_vt_available">true</bool>
