@@ -47,8 +47,8 @@
     "revision": "android-7.1"
   },
   {
-    "remote": "github",
-    "repository": "Hardslog/android_kernel_oneplus_msm8994",
+    "remote": "omnirom",
+    "repository": "android_kernel_oneplus_msm8994",
     "target_path": "kernel/msm8994",
     "revision": "android-7.1"
   }
