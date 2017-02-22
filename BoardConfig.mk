@@ -211,7 +211,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_FSTAB := $(BOARD_PATH)/rootdir/etc/fstab.qcom
 
 # SELinux
-include device/qcom/caf-sepolicy/sepolicy.mk
+include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(BOARD_PATH)/sepolicy
 
 
