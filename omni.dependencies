@@ -35,6 +35,7 @@
     "target_path": "packages/apps/SnapdragonCamera",
     "revision": "android-7.1"
   },
+  {
     "remote": "omnirom",
     "repository": "android_external_libnfnetlink",
     "target_path": "external/libnfnetlink",
@@ -49,7 +50,7 @@
   {
     "remote": "omnirom",
     "repository": "android_kernel_oneplus_msm8994",
-    "target_path": "kernel/msm8994",
+    "target_path": "kernel/oneplus/msm8994",
     "revision": "android-7.1"
   }
 ]
