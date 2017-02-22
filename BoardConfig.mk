@@ -212,7 +212,7 @@ TARGET_RECOVERY_FSTAB := $(BOARD_PATH)/rootdir/etc/fstab.qcom
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += $(BOARD_PATH)/sepolicy
 
 
 # inherit from the proprietary version
