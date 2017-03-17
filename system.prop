@@ -131,9 +131,6 @@ persist.timed.enable=true
 persist.data.iwlan.enable=true
 
 # OnePlus 2-specific things (OOS3)
-dev.pm.dyn_samplingrate=1
-debug.sf.hw=1
-debug.egl.hw=1
 persist.mdpcomp.4k2kSplit=1
 persist.hwc.mdpcomp.maxpermixer=5
 persist.mdpcomp_perfhint=50
