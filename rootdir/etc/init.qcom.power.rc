@@ -79,9 +79,6 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu6/online 1
     write /sys/devices/system/cpu/cpu7/online 1
 
-    # change GPU initial power level from 305MHz(level 4) to 180MHz(level 5) for power savings
-    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 5
-
     # Configure foreground and background cpuset
     write /dev/cpuset/foreground/cpus 0-7
     write /dev/cpuset/foreground/boost/cpus 4-7
