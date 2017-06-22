@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2013 The OmniROM Project
+* Copyright (C) 2017 The OmniROM Project
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -23,9 +23,9 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceManager;
 
-public class TorchGestureSwitch implements OnPreferenceChangeListener {
+public class LeftArrowGestureSwitch implements OnPreferenceChangeListener {
 
-    private static final String FILE = "/proc/touchpanel/down_arrow_enable";
+    private static final String FILE = "/proc/touchpanel/left_arrow_enable";
 
     public static String getFile() {
         if (Utils.fileWritable(FILE)) {
